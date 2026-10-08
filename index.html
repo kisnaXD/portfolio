@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Krishna Gera's portfolio, arranged as an interactive desktop."
+    />
+    <meta name="theme-color" content="#0878ca" />
+    <title>Krishna Gera — Desktop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="desktop" id="desktop" aria-label="Krishna Gera's portfolio desktop">
+      <div class="wallpaper" aria-hidden="true"></div>
+      <div class="wallpaper-shade" aria-hidden="true"></div>
+
+      <section class="desktop-icons" id="desktop-icons" aria-label="Desktop shortcuts"></section>
+
+      <div class="desktop-copy">
+        <p class="eyebrow">PERSONAL PORTFOLIO</p>
+        <h1>KRISHNA<br /><span>GERA</span></h1>
+      </div>
+
+      <section class="window-layer" id="window-layer" aria-label="Open portfolio windows"></section>
+
+      <div class="start-menu glass-panel" id="start-menu" hidden>
+        <form class="start-search-form" id="start-search-form">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="start-search" type="search" placeholder="Search for apps, settings, and documents" autocomplete="off" />
+        </form>
+        <div class="start-section-heading"><strong>Pinned</strong><button class="start-all-apps" type="button">All apps <span>›</span></button></div>
+        <div class="start-grid" id="start-grid"></div>
+        <div class="start-search-results" id="start-search-results" hidden></div>
+        <div class="start-footer"><span class="user-orb">KG</span><span>Krishna Gera</span><button class="start-power" type="button" aria-label="Power">⏻</button></div>
+      </div>
+
+      <footer class="taskbar" aria-label="Desktop taskbar">
+        <div class="taskbar-center">
+          <button class="taskbar-start" id="start-button" aria-label="Open Start menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3.6 10.7 2.4v8.4H2V3.6Zm10.2-1.5L22 0.7v10.1h-9.8V2.1ZM2 12.1h8.7v8.4L2 19.3v-7.2Zm10.2 0H22v10.1l-9.8-1.4V12.1Z" fill="currentColor"/></svg>
+          </button>
+          <button class="taskbar-search" id="taskbar-search" aria-label="Search" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span>
+          </button>
+          <div class="taskbar-pinned-apps" id="taskbar-pinned-apps" aria-label="Pinned apps"></div>
+          <div class="taskbar-open-apps" id="taskbar-open-apps" aria-label="Open windows"></div>
+        </div>
+        <div class="taskbar-tray">
+          <button class="tray-network" id="tray-network" aria-label="Open Wi-Fi and quick settings" aria-expanded="false">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 7.5a12 12 0 0 1 16 0M5 10.5a7.5 7.5 0 0 1 10 0M8 13.5a3 3 0 0 1 4 0M10 16h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tray-battery" id="tray-battery" aria-label="Open power and battery settings" aria-expanded="false">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="5.5" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M18 8v4M5 8h8v4H5z" fill="currentColor"/></svg>
+          </button>
+          <button class="tray-clock" id="tray-clock" aria-label="Open calendar and notifications" aria-expanded="false"><span id="clock-time">--:--</span><span id="clock-date">--/--/----</span></button>
+          <button class="show-desktop" id="show-desktop" aria-label="Minimize all windows"></button>
+        </div>
+      </footer>
+      <section class="quick-settings-panel" id="quick-settings-panel" aria-label="Quick settings" hidden>
+        <div class="system-panel-heading"><strong>Quick settings</strong><span>Demo controls</span></div>
+        <div class="quick-settings-grid">
+          <button class="quick-setting-tile enabled" data-quick-toggle="wifi" aria-pressed="true"><span class="quick-setting-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 7.5a12 12 0 0 1 16 0M5 10.5a7.5 7.5 0 0 1 10 0M8 13.5a3 3 0 0 1 4 0M10 16h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><strong>Wi-Fi</strong><small>Portfolio network</small></span></button>
+          <button class="quick-setting-tile" data-quick-toggle="bluetooth" aria-pressed="false"><span class="quick-setting-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 7 10-4 3V2l4 3L7 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Bluetooth</strong><small>Off</small></span></button>
+          <button class="quick-setting-tile" data-quick-toggle="airplane" aria-pressed="false"><span class="quick-setting-icon">✈</span><span><strong>Airplane mode</strong><small>Off</small></span></button>
+          <button class="quick-setting-tile" data-quick-toggle="battery-saver" aria-pressed="false"><span class="quick-setting-icon">◉</span><span><strong>Battery saver</strong><small>Off</small></span></button>
+        </div>
+        <label class="system-slider-row"><span>Brightness</span><input type="range" min="20" max="100" value="80" aria-label="Demo brightness"></label>
+        <p class="system-panel-note">These controls are a visual demo and do not change your device settings.</p>
+      </section>
+      <section class="calendar-panel" id="calendar-panel" aria-label="Calendar and notifications" hidden>
+        <div class="calendar-panel-top"><div><strong id="calendar-time">--:--</strong><span id="calendar-long-date">Loading date...</span></div><button type="button" aria-label="Close calendar" data-close-calendar>×</button></div>
+        <div class="calendar-month-row"><strong id="calendar-month-label"></strong><div><button type="button" data-calendar-shift="-1" aria-label="Previous month">‹</button><button type="button" data-calendar-shift="1" aria-label="Next month">›</button></div></div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Calendar"></div>
+        <div class="calendar-notifications"><strong>Notifications</strong><span>No new notifications</span></div>
+      </section>
+    </main>
+    <div class="boot-screen" id="boot-screen" data-phase="boot" role="status" aria-live="polite" aria-label="Starting Windows">
+      <div class="boot-stage boot-stage-loading">
+        <svg class="boot-windows-logo" viewBox="0 0 48 48" aria-hidden="true"><path d="M3 8 21 5.5v17H3V8Zm21-3 21-3v20.5H24V5Zm-21 20h18v17L3 39.5V25Zm21 0h21v20.5l-21-3V25Z" fill="currentColor"/></svg>
+        <span class="boot-spinner" aria-hidden="true"></span>
+      </div>
+      <div class="boot-stage boot-stage-signin">
+        <div class="boot-lock-clock"><strong id="boot-clock">--:--</strong><span id="boot-date">Loading date...</span></div>
+        <div class="boot-signin-profile">
+          <span class="boot-user-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,.24)"/><circle cx="24" cy="18" r="8" fill="rgba(255,255,255,.94)"/><path d="M9 43c1.8-9.2 7.2-14 15-14s13.2 4.8 15 14" fill="rgba(255,255,255,.94)"/></svg></span>
+          <strong class="boot-user-name">Krishna Gera</strong>
+          <span class="boot-welcome">Welcome</span>
+          <span class="boot-spinner" aria-hidden="true"></span>
+        </div>
+        <div class="boot-lock-actions" aria-hidden="true"><span>◉</span><span>⌁</span><span>⏻</span></div>
+      </div>
+    </div>
+    <div class="context-menu" id="context-menu" role="menu" hidden></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="220" y1="91" x2="1659" y2="1058" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#087FD1"/>
+      <stop offset=".48" stop-color="#0668B2"/>
+      <stop offset="1" stop-color="#043A78"/>
+    </linearGradient>
+    <linearGradient id="ribbonA" x1="480" y1="281" x2="1386" y2="853" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43C9FA"/>
+      <stop offset=".38" stop-color="#0781D7"/>
+      <stop offset=".72" stop-color="#0755AF"/>
+      <stop offset="1" stop-color="#27BAEF"/>
+    </linearGradient>
+    <linearGradient id="ribbonB" x1="381" y1="733" x2="1457" y2="393" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0754A8"/>
+      <stop offset=".36" stop-color="#0B93DD"/>
+      <stop offset=".69" stop-color="#45D4FA"/>
+      <stop offset="1" stop-color="#0876C8"/>
+    </linearGradient>
+    <linearGradient id="ribbonC" x1="678" y1="203" x2="1225" y2="936" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AE2F8"/>
+      <stop offset=".3" stop-color="#168FD5"/>
+      <stop offset=".72" stop-color="#064994"/>
+      <stop offset="1" stop-color="#087FC9"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="matrix(609 0 0 420 994 490)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43C8F2" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#0A74BD" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-100" y="-100" width="2120" height="1280" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1920v1080H0z"/>
+  <path fill="url(#light)" d="M0 0h1920v1080H0z"/>
+  <ellipse cx="960" cy="573" fill="#051C42" fill-opacity=".22" filter="url(#blur)" rx="613" ry="305"/>
+  <path fill="url(#ribbonA)" d="M311 454c110-185 295-291 499-299 178-7 305 65 439 191 78 73 143 119 257 135 53 7 103 4 150-9-29 147-145 267-301 302-171 38-313-12-450-135-95-85-173-126-281-127-106 0-215 38-313 111 5-59 5-112 0-169Z"/>
+  <path fill="url(#ribbonB)" d="M343 716c87 63 183 95 287 88 102-7 182-58 279-148 159-147 309-201 491-156 101 25 186 84 239 166-113-42-218-39-323 9-83 38-146 94-229 162-143 118-266 171-428 155-160-16-287-107-342-246-6-14-11-28-15-43 13 5 27 9 41 13Z"/>
+  <path fill="url(#ribbonC)" d="M704 166c83-14 166-11 247 14 29 9 57 21 85 35-110 30-202 90-303 190-83 82-151 133-232 151-86 19-171 3-260-46 38-166 221-313 463-344Z"/>
+  <path fill="#A5F0FF" fill-opacity=".32" d="M496 362c70-72 152-127 250-166 91-36 181-53 266-48-106 18-225 89-334 192-70 66-134 117-201 146-74 32-140 40-209 26 78-31 152-81 228-150Z"/>
+  <path fill="#003F87" fill-opacity=".3" d="M1399 458c-56-60-117-101-188-126-90-31-185-34-285-9 143-60 269-77 394-47 79 19 150 59 208 119 49 50 85 109 104 174-59-47-128-82-233-111Z"/>
+  <path fill="#BBF6FF" fill-opacity=".22" d="M755 864c121-18 219-81 329-180 105-94 195-151 301-176 84-20 165-14 244 16-66-13-132-10-195 9-106 31-193 98-294 190-126 115-250 188-399 202-117 11-223-18-312-83 108 36 218 43 326 22Z"/>
+  <path fill="#D0F9FF" fill-opacity=".28" d="M1156 252c88 40 162 107 220 183 39 52 65 100 82 145-56-80-134-143-221-181-77-34-151-48-223-44 49-48 96-81 142-103Z"/>
+</svg>
