@@ -1,5 +1,5 @@
 const profile = {
-  resume: "",
+  resume: "./resume.pdf",
   socials: {
     LinkedIn: "",
     Instagram: "",
@@ -18,6 +18,9 @@ const profile = {
 
 const desktop = document.querySelector("#desktop");
 const bootScreen = document.querySelector("#boot-screen");
+const bootSignInButton = document.querySelector("#boot-signin-button");
+const bootWelcome = document.querySelector("#boot-welcome");
+const bootSigninSpinner = document.querySelector("#boot-signin-spinner");
 const desktopIcons = document.querySelector("#desktop-icons");
 const windowLayer = document.querySelector("#window-layer");
 const pinnedApps = document.querySelector("#taskbar-pinned-apps");
@@ -64,17 +67,27 @@ const explorerHistory = new WeakMap();
 function playBootSequence() {
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const bootDuration = reducedMotion ? 250 : 1450;
-  const signInDuration = reducedMotion ? 400 : 1850;
   const fadeDuration = reducedMotion ? 100 : 500;
   window.setTimeout(() => {
     bootScreen.dataset.phase = "signin";
-    bootScreen.setAttribute("aria-label", "Signing in to Krishna Gera's desktop");
+    bootScreen.setAttribute("aria-label", "Sign in to Krishna Gera's desktop");
+    bootSignInButton.focus();
   }, bootDuration);
-  window.setTimeout(() => {
-    bootScreen.classList.add("boot-screen-exiting");
-    bootScreen.setAttribute("aria-label", "Desktop ready");
-    window.setTimeout(() => bootScreen.remove(), fadeDuration);
-  }, bootDuration + signInDuration);
+
+  bootSignInButton.addEventListener("click", () => {
+    if (bootScreen.dataset.phase !== "signin") return;
+    bootScreen.dataset.phase = "welcome";
+    bootScreen.setAttribute("aria-label", "Signing in to Krishna Gera's desktop");
+    bootScreen.setAttribute("aria-busy", "true");
+    bootWelcome.hidden = false;
+    bootSigninSpinner.hidden = false;
+    window.setTimeout(() => {
+      bootScreen.classList.add("boot-screen-exiting");
+      bootScreen.setAttribute("aria-label", "Desktop ready");
+      bootScreen.removeAttribute("aria-busy");
+      window.setTimeout(() => bootScreen.remove(), fadeDuration);
+    }, reducedMotion ? 400 : 1200);
+  });
 }
 
 function escapeHtml(value) {

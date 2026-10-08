@@ -82,7 +82,7 @@
         <div class="calendar-notifications"><strong>Notifications</strong><span>No new notifications</span></div>
       </section>
     </main>
-    <div class="boot-screen" id="boot-screen" data-phase="boot" role="status" aria-live="polite" aria-label="Starting Windows">
+    <div class="boot-screen" id="boot-screen" data-phase="boot" role="dialog" aria-modal="true" aria-label="Starting Krishna Gera's desktop">
       <div class="boot-stage boot-stage-loading">
         <svg class="boot-windows-logo" viewBox="0 0 48 48" aria-hidden="true"><path d="M3 8 21 5.5v17H3V8Zm21-3 21-3v20.5H24V5Zm-21 20h18v17L3 39.5V25Zm21 0h21v20.5l-21-3V25Z" fill="currentColor"/></svg>
         <span class="boot-spinner" aria-hidden="true"></span>
@@ -92,8 +92,9 @@
         <div class="boot-signin-profile">
           <span class="boot-user-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,.24)"/><circle cx="24" cy="18" r="8" fill="rgba(255,255,255,.94)"/><path d="M9 43c1.8-9.2 7.2-14 15-14s13.2 4.8 15 14" fill="rgba(255,255,255,.94)"/></svg></span>
           <strong class="boot-user-name">Krishna Gera</strong>
-          <span class="boot-welcome">Welcome</span>
-          <span class="boot-spinner" aria-hidden="true"></span>
+          <button class="boot-signin-button" id="boot-signin-button" type="button">Sign in <kbd>Enter</kbd></button>
+          <span class="boot-welcome" id="boot-welcome" hidden>Welcome</span>
+          <span class="boot-spinner" id="boot-signin-spinner" aria-hidden="true" hidden></span>
         </div>
         <div class="boot-lock-actions" aria-hidden="true"><span>◉</span><span>⌁</span><span>⏻</span></div>
       </div>

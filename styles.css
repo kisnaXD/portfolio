@@ -48,8 +48,13 @@ button:focus-visible { outline: 2px solid #adffad; outline-offset: 3px; }
 .boot-user-avatar { display: block; width: 92px; height: 92px; margin-bottom: 1px; }
 .boot-user-avatar svg { display: block; width: 100%; height: 100%; }
 .boot-user-name { font-size: 21px; font-weight: 400; letter-spacing: .01em; }
+.boot-signin-button { min-width: 132px; margin-top: 3px; padding: 8px 14px; border: 1px solid rgba(255,255,255,.56); border-radius: 4px; background: rgba(255,255,255,.16); color: inherit; cursor: pointer; text-shadow: inherit; }
+.boot-signin-button:hover { background: rgba(255,255,255,.25); }
+.boot-signin-button kbd { margin-left: 8px; padding: 2px 5px; border: 1px solid rgba(255,255,255,.4); border-radius: 3px; font: inherit; font-size: 11px; }
+.boot-screen[data-phase="welcome"] .boot-signin-button { display: none; }
 .boot-welcome { margin-top: 5px; font-size: 14px; color: rgba(245,247,251,.85); }
 .boot-stage-signin .boot-spinner { width: 20px; height: 20px; margin-top: 4px; }
+.boot-stage-signin [hidden] { display: none; }
 .boot-lock-actions { position: absolute; right: 26px; bottom: 22px; display: flex; align-items: center; gap: 20px; color: rgba(255,255,255,.9); font-size: 17px; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
 @keyframes boot-spin { to { transform: rotate(360deg); } }
 
